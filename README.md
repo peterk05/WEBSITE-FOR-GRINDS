@@ -25,10 +25,16 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-            line-height: 1.6;
+            font-family: 'Georgia', 'Garamond', 'Cambria', serif;
+            line-height: 1.8;
             color: var(--text);
             background: var(--bg);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Georgia', 'Garamond', serif;
+            font-weight: 700;
+            letter-spacing: -0.5px;
         }
 
         header {
@@ -68,6 +74,7 @@
             font-weight: 500;
             transition: color 0.3s;
             cursor: pointer;
+            font-family: 'Georgia', serif;
         }
 
         nav a:hover, nav a.active {
@@ -376,7 +383,138 @@
             display: block;
         }
 
+        .tutor-card {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 3rem;
+            align-items: start;
+            background: var(--bg-card);
+            padding: 3rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .tutor-image {
+            width: 280px;
+            height: 350px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+            font-weight: bold;
+        }
+
+        .tutor-content h2 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .tutor-content .title {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .tutor-bio {
+            margin-bottom: 2rem;
+            line-height: 1.9;
+            color: var(--text);
+        }
+
+        .credentials {
+            background: #f0f9ff;
+            padding: 1.5rem;
+            border-left: 4px solid var(--primary);
+            border-radius: 6px;
+            margin-bottom: 1.5rem;
+        }
+
+        .credentials h4 {
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+        }
+
+        .credentials ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .credentials li {
+            padding: 0.4rem 0;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .credentials li:before {
+            content: "✓";
+            color: var(--secondary);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .glaze-section {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.08) 100%);
+            border: 1px solid rgba(37, 99, 235, 0.15);
+            padding: 3rem;
+            border-radius: 12px;
+            margin-top: 2rem;
+        }
+
+        .glaze-section h3 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .glaze-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .glaze-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid rgba(37, 99, 235, 0.1);
+        }
+
+        .glaze-item-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .glaze-item h4 {
+            color: var(--text);
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .glaze-item p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
         @media (max-width: 768px) {
+            .tutor-card {
+                grid-template-columns: 1fr;
+            }
+
+            .tutor-image {
+                width: 100%;
+                height: 250px;
+            }
             nav ul {
                 gap: 1rem;
             }
@@ -405,6 +543,7 @@
             <a class="logo">📚 Leaving Cert Grinds</a>
             <ul>
                 <li><a class="nav-link active" data-page="home">Home</a></li>
+                <li><a class="nav-link" data-page="about">About Peter</a></li>
                 <li><a class="nav-link" data-page="subjects">Subjects</a></li>
                 <li><a class="nav-link" data-page="reviews">Reviews</a></li>
                 <li><a class="nav-link" data-page="contact">Contact</a></li>
@@ -532,6 +671,99 @@
                     <div>
                         <h4>Email Support</h4>
                         <p>Ongoing email and WhatsApp support between sessions for quick questions</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ABOUT PAGE -->
+    <div id="about" class="page">
+        <section class="container">
+            <h2 class="section-title">Meet Your Tutor</h2>
+            <p class="section-subtitle">Learn more about Peter Kernohan and his approach to teaching</p>
+
+            <div class="tutor-card">
+                <div class="tutor-image">PK</div>
+                <div class="tutor-content">
+                    <h2>Peter Kernohan</h2>
+                    <p class="title">Expert Tutor in Computer Science &amp; Higher Level Maths</p>
+
+                    <p class="tutor-bio">
+                        Peter is a second-year student at Maynooth University, specializing in Robotics and Intelligent Devices. With a strong foundation in embedded systems, computer vision, and advanced mathematics, he brings real-world technical expertise directly into the classroom.
+                    </p>
+
+                    <p class="tutor-bio">
+                        His tutoring philosophy is simple: break down complex concepts into digestible pieces, connect theory to practical applications, and build genuine understanding rather than rote memorization. Having recently mastered these subjects himself, he understands exactly where students struggle and how to guide them through.
+                    </p>
+
+                    <div class="credentials">
+                        <h4>🎓 Academic Credentials</h4>
+                        <ul>
+                            <li>Bachelor of Science in Robotics &amp; Intelligent Devices (Maynooth University)</li>
+                            <li>Coursework: Computer Vision, Deep Learning, PID Control Systems, Digital Logic, Embedded Systems</li>
+                            <li>Head 2nd Year Student Representative for Robotics Programme</li>
+                            <li>IEEE Maynooth Student Branch Committee Member</li>
+                        </ul>
+                    </div>
+
+                    <div class="credentials">
+                        <h4>💻 Technical Expertise</h4>
+                        <ul>
+                            <li>Advanced programming: Python, C/C++, Java, MATLAB</li>
+                            <li>Robotics &amp; control systems design</li>
+                            <li>Computer vision &amp; deep learning (YOLOv8, OpenCV)</li>
+                            <li>Real-time embedded systems &amp; microcontroller programming</li>
+                            <li>Mathematical modelling &amp; differential equations</li>
+                        </ul>
+                    </div>
+
+                    <div class="credentials">
+                        <h4>🏆 Project Leadership</h4>
+                        <ul>
+                            <li>Team Lead &amp; Technical Architect for RoboRiotz 2025 Combat Robot Competition</li>
+                            <li>Co-Leader of Intelligent Bird Recognition System using YOLOv8 deep learning</li>
+                            <li>Developer of autonomous navigation robots with real-time vision processing</li>
+                            <li>Successfully sourced €2,000+ in sponsorship funding for robotics projects</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glaze-section">
+                <h3>Why Hire Peter as Your Tutor?</h3>
+                <p>Peter combines cutting-edge technical knowledge with proven teaching ability. He doesn't just know the material—he's building solutions with it.</p>
+
+                <div class="glaze-grid">
+                    <div class="glaze-item">
+                        <div class="glaze-item-icon">🎯</div>
+                        <h4>Recent Knowledge</h4>
+                        <p>Still actively learning and mastering these subjects—understands current struggles</p>
+                    </div>
+                    <div class="glaze-item">
+                        <div class="glaze-item-icon">💡</div>
+                        <h4>Real-World Application</h4>
+                        <p>Applies concepts daily in robotics projects and research</p>
+                    </div>
+                    <div class="glaze-item">
+                        <div class="glaze-item-icon">🤝</div>
+                        <h4>Peer Connection</h4>
+                        <p>Similar age—speaks your language and understands student pressures</p>
+                    </div>
+                    <div class="glaze-item">
+                        <div class="glaze-item-icon">📊</div>
+                        <h4>Mathematical Rigor</h4>
+                        <p>Deep expertise in differential equations, control theory, and advanced maths</p>
+                    </div>
+                    <div class="glaze-item">
+                        <div class="glaze-item-icon">🔬</div>
+                        <h4>Problem Solving</h4>
+                        <p>Trained to debug complex systems—applies systematic approach to tutoring</p>
+                    </div>
+                    <div class="glaze-item">
+                        <div class="glaze-item-icon">✨</div>
+                        <h4>Personalized Approach</h4>
+                        <p>Tailors explanations to your learning style and pace</p>
                     </div>
                 </div>
             </div>
@@ -791,6 +1023,11 @@
                 e.preventDefault();
                 navigateTo(this.dataset.page);
             });
+        });
+
+        // Initialize
+        window.addEventListener('load', function() {
+            console.log('Leaving Cert Grinds Website loaded - Tutor: Peter Kernohan');
         });
     </script>
 </body>
